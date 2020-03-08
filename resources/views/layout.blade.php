@@ -160,7 +160,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!--<img src="plantilla/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">-->
         </div>
         <div class="info">
-          <a href="#" class="d-block">Usuario Nicolas</a>
+          <a href="#" class="d-block">Nicolas</a>
         </div>
       </div>
 
@@ -171,7 +171,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-home"></i>
+              <i class="nav-icon fas fa-shoe-prints"></i>
               <p>
                 Calzado
                 <i class="right fas fa-angle-left"></i>
@@ -194,7 +194,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa fa-dollar-sign"></i>
               <p>
                 Caja
               </p>
