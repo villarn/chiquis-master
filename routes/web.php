@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('home');
-});
+})->name('inicio');;
 
 Route::get('calzado/marca', function (){
     return view('Calzado/marca');

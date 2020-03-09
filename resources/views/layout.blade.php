@@ -11,12 +11,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <title>Chiquis</title>
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="/plantilla/plugins/fontawesome-free/css/all.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="/plantilla/dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    @yield('estilado')
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="/plantilla/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/plantilla/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -159,7 +161,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <!--<img src="/plantilla/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">-->
         </div>
         <div class="info">
-            <a href="#" class="d-block"><i class="nav-icon fas fa-user"> Nicolás</i></a>
+            <a href="#" class="d-block"><i class="nav-icon fas fa-user"> {{ Auth::user()->name }}</i></a>
         </div>
       </div>
 
