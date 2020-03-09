@@ -14,7 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="/plantilla/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="plantilla/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="/plantilla/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -22,7 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-red navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
@@ -144,11 +144,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-light-danger elevation-4">
+  <aside class="main-sidebar sidebar-light-danger elevation-1">
     <!-- Brand Logo -->
     <a href="{{ url('/') }}" class="brand-link" style="background-color: #dc3545;">
-      <img src="plantilla/dist/img/ChiquisLogo.png" alt="Logo Chiquis" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
+      <img src="/plantilla/dist/img/ChiquisLogo.png" alt="Logo Chiquis" class="brand-image">
       <span class="brand-text font-weight-normal" style="color: white">Chiquis</span>
     </a>
 
@@ -157,10 +156,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <!--<img src="plantilla/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">-->
+          <!--<img src="/plantilla/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">-->
         </div>
         <div class="info">
-          <a href="#" class="d-block">Nicolas</a>
+            <a href="#" class="d-block"><i class="nav-icon fas fa-user"> Nicolás</i></a>
         </div>
       </div>
 
@@ -179,15 +178,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link ">
+                <a href="{{ route('marca') }}" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Venta</p>
+                  <p>Marcas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('proveedor') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Devolución</p>
+                  <p>Proveedores</p>
                 </a>
               </li>
             </ul>
@@ -232,6 +231,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-circle"></i>
+              <p>
+                Clientes
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -250,8 +257,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
+              <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('logout') }}">Logout</a></li>
+{{--              <li class="breadcrumb-item active">Starter Page</li>--}}
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -261,66 +269,67 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+        @yield('content')
+{{--      <div class="container-fluid">--}}
+{{--        <div class="row">--}}
+{{--          <div class="col-lg-6">--}}
+{{--            <div class="card">--}}
+{{--              <div class="card-body">--}}
+{{--                <h5 class="card-title">Card title</h5>--}}
 
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
+{{--                <p class="card-text">--}}
+{{--                  Some quick example text to build on the card title and make up the bulk of the card's--}}
+{{--                  content.--}}
+{{--                </p>--}}
 
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
+{{--                <a href="#" class="card-link">Card link</a>--}}
+{{--                <a href="#" class="card-link">Another link</a>--}}
+{{--              </div>--}}
+{{--            </div>--}}
 
-            <div class="card card-primary card-outline">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+{{--            <div class="card card-primary card-outline">--}}
+{{--              <div class="card-body">--}}
+{{--                <h5 class="card-title">Card title</h5>--}}
 
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div><!-- /.card -->
-          </div>
-          <!-- /.col-md-6 -->
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
+{{--                <p class="card-text">--}}
+{{--                  Some quick example text to build on the card title and make up the bulk of the card's--}}
+{{--                  content.--}}
+{{--                </p>--}}
+{{--                <a href="#" class="card-link">Card link</a>--}}
+{{--                <a href="#" class="card-link">Another link</a>--}}
+{{--              </div>--}}
+{{--            </div><!-- /.card -->--}}
+{{--          </div>--}}
+{{--          <!-- /.col-md-6 -->--}}
+{{--          <div class="col-lg-6">--}}
+{{--            <div class="card">--}}
+{{--              <div class="card-header">--}}
+{{--                <h5 class="m-0">Featured</h5>--}}
+{{--              </div>--}}
+{{--              <div class="card-body">--}}
+{{--                <h6 class="card-title">Special title treatment</h6>--}}
 
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+{{--                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>--}}
+{{--                <a href="#" class="btn btn-primary">Go somewhere</a>--}}
+{{--              </div>--}}
+{{--            </div>--}}
 
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
+{{--            <div class="card card-primary card-outline">--}}
+{{--              <div class="card-header">--}}
+{{--                <h5 class="m-0">Featured</h5>--}}
+{{--              </div>--}}
+{{--              <div class="card-body">--}}
+{{--                <h6 class="card-title">Special title treatment</h6>--}}
 
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <!-- /.col-md-6 -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+{{--                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>--}}
+{{--                <a href="#" class="btn btn-primary">Go somewhere</a>--}}
+{{--              </div>--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--          <!-- /.col-md-6 -->--}}
+{{--        </div>--}}
+{{--        <!-- /.row -->--}}
+{{--      </div><!-- /.container-fluid -->--}}
     </div>
     <!-- /.content -->
   </div>
@@ -340,10 +349,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+        <img src="/plantilla/dist/img/lixarg.png" alt="lixargLogo" class="img-size-64 mr-3 img-circle">
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; {{date('Y')}} <a href="https://lixarg.com.ar">Lixarg</a>.</strong>
   </footer>
 </div>
 <!-- ./wrapper -->
@@ -355,6 +364,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Bootstrap 4 -->
 <script src="/plantilla/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="plantilla/dist/js/adminlte.min.js"></script>
+<script src="/plantilla/dist/js/adminlte.min.js"></script>
 </body>
 </html>

@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('home');
 });
+
+Route::get('calzado/marca', function (){
+    return view('Calzado/marca');
+})->name('marca');
+
+Route::get('calzado/proveedor', function (){
+    return view('Calzado/proveedor');
+})->name('proveedor');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'Auth\LogoutController@logout' );

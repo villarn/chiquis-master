@@ -1,12 +1,12 @@
 @extends('layout')
 
-@section('pageTitle') 
-Pagina Incial 
+@section('pageTitle')
+Pagina Incial
 @endsection
 
 @section('content')
 
-<h1>PEPE SECTIO</h1>
+<h1>Pagina de Inicio</h1>
 
 @endsection
 
