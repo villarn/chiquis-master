@@ -24,9 +24,10 @@ Route::get('/', function () {
 
 //ABML MARCA
 Route::get('calzado/marca', 'MarcaController@index')->name('marca');
-Route::get('calzado/marca_editar/{id}', 'MarcaController@editar')->name('marca_editar');
 Route::post('calzado/marca_nuevo', 'MarcaController@nuevo')->name('marca_nuevo');
-
+Route::get('calzado/marca_editar/{id}', 'MarcaController@editar')->name('marca_editar');
+Route::put('calzado/marca_editar/{id}', 'MarcaController@update')->name('marca_update');
+Route::delete('calzado/marca_eliminar/{id}', 'MarcaController@eliminar')->name('marca_eliminar');
 
 Route::get('calzado/proveedor', function (){
     return view('Calzado.proveedor');
