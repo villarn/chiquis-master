@@ -33,6 +33,11 @@ Route::get('calzado/proveedor', function (){
     return view('Calzado.proveedor');
 })->name('proveedor');
 
+Route::get('clientes', 'ClientesController@index')->name('clientes');
+Route::post('clientes', 'ClientesController@create')->name('clientes.create');
+Route::delete('/clientes/{id}', 'ClientesController@delete')->name('clientes.delete');
+Route::put('/clientes/{id}', 'ClientesController@update')->name('clientes.edit');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
